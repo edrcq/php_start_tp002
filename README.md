@@ -6,3 +6,6 @@ Copier le fichier src/config.example.php en src/config.php
 ```
 cp src/config.example.php src/config.php
 ```
+
+## Exo 1
+- Completer 

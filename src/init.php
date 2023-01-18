@@ -15,3 +15,11 @@ $dbManager = new DbManager($db);
 
 // utils
 require_once __DIR__ . '/utils/errors.php';
+
+// on prepare la variable $user pour tout notre site internet, plus besoin de le faire plus tard.
+// on sait que si on est connecte $user !== false
+// on sait que $user->role renvoie le role de l'utilisateur
+$user = false;
+if (isset($_SESSION['user_id'])) {
+    $user = $dbManager->getById('users', $_SESSION['user_id'], 'User');
+}
